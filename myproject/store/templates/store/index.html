@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+
+    .topnav {
+      background-color: #555;
+      width:100%;
+      top:0;
+      padding:10px;
+      display: flex;
+      flex:100%;
+    }
+
+    .topnav a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: .3s;
+    }
+
+    .topnav a:hover {
+      background-color: tomato;
+      color: white;
+    }
+
+    .topnav a.active {
+      background-color:tomato;
+      color: white;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    .flex-container {
+      flex: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: center;
+      height:100%;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      background-color: white;
+      flex:4;
+    }
+
+    li {
+      flex:4;
+      padding-top:10px;
+      padding-bottom: 10px;
+      list-style-type: none;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #555;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      transition: .3s;
+    }
+
+    .card button:hover {
+      background-color: tomato;
+    }
+
+    body {
+      background-image:url("/media/background/store/Top-HD-Pic.jpg");
+      background-attachment: fixed;
+      background-repeat: repeat;
+      font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background-color: tomato;
+      color: white;
+    }
+
+</style>
+
+<header>
+<div class="topnav">
+  <a href="/home">Home</a>
+  <a href="/about">About</a>
+  <a class="active" href="/store">Store</a>
+  <a href="/contact">Contact</a>
+</div>
+</header>
+
+<body>
+
+<div class="flex-container">
+  <div class="container">
+    {% for pictures in img %}
+    <li>
+      <div class="card">
+          <img src="{{pictures.pic.url}}" alt="Test" width=300 height=150>
+          <h1>{{pictures.name}}</h1>
+          <p class="price">${{pictures.price}}</p>
+          <p>{{pictures.description}}</p>
+          <button type="submit" value="#">Add to Cart</button>
+      </div>
+    </li>
+    {% endfor %}
+  </div>
+
+</div>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  {% for bg in pic %}
+  <style>
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    .topnav {
+      background-color: #555;
+      width:100%;
+      top:0;
+      padding:10px;
+      display: flex;
+      flex:100%;
+    }
+
+    .topnav a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: .3s;
+    }
+
+    .topnav a:hover {
+      background-color: tomato;
+      color: white;
+    }
+
+    .topnav a.active {
+      background-color:tomato;
+      color: white;
+    }
+
+    body, html {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .bg {
+      background-image:url("{{bg.pic.url}}");
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .bg-top-page {
+      background-color:black;
+      height:20%;
+    }
+
+    .flex-container {
+      flex: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap:wrap;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .center-text {
+      color:white;
+    }
+
+    .center-box-text {
+      color:white;
+      margin:5px;
+    }
+
+    .container-1 {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      text-align: center;
+    }
+
+    .container-2 {
+      display: flex;
+      flex-direction: row;
+      background-color:black;
+      text-align: center;
+      height:200px;
+      justify-content:space-around;
+    }
+
+    .container-3 {
+      text-align: center;
+    }
+
+    .container-2-box-1 {
+      background-color:#555;
+      border:1px #ccc solid;
+      flex:2;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .container-2-box-2 {
+      background-color: #555;
+      border:1px #ccc solid;
+      flex:2;
+      transition: 0.3s;
+    }
+
+    .container-2-box-3 {
+      background-color: #555;
+      border:1px #ccc solid;
+      flex:2;
+      transition: 0.3s;
+    }
+
+    .container-2-box-1:hover {
+      background-color: tomato;
+    }
+
+    .container-2-box-2:hover {
+      background-color: tomato;
+    }
+
+    .container-2-box-3:hover {
+      background-color: tomato;
+    }
+
+    a:hover {
+      text-decoration:none;
+    }
+
+    ::selection {
+      background-color: tomato;
+      color: white;
+    }
+
+  </style>
+  {% endfor %}
+
+</head>
+
+<header>
+  <div class="topnav">
+    <a class="active" href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/store">Store</a>
+    <a href="/contact">Contact</a>
+  </div>
+</header>
+
+<body class="bg">
+
+  <div class="flex-container">
+
+    <div class="container-1">
+      <h2 class="center-text">Hi...</h2>
+        <h1 class="center-text" style="font-size:50px">My name is Jenni Bauers</h1>
+      <p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec.</p>
+    </div>
+
+
+    <div class="container-2">
+      <a class="container-2-box-1" href="/about" >
+        <h1 class="center-box-text">About</h1>
+        <p class="center-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosq.</p>
+      </a>
+    
+      <a class="container-2-box-2" href="/store">
+        <h1 class="center-box-text">Store</h1>
+        <p class="center-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosq.</p>
+      </a>
+
+      <a class="container-2-box-3" href="#">
+        <h1 class="center-box-text">Contact</h1>
+        <p class="center-box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosq.</p>
+      </a>
+    </div>
+
+    <div class="container-3">
+      <h2 class="center-text">Hi...</h2>
+        <h1 class="center-text" style="font-size:50px">My name is Jenni Bauers</h1>
+      <p class="center-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec.</p>
+    </div>
+
+  </div>
+</body>
+
+<footer>
+    
+</footer>
+
+</html>

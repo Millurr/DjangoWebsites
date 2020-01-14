@@ -1,0 +1,152 @@
+<!-- templates/email.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    .topnav {
+      background-color: #555;
+      width:100%;
+      top:0;
+      padding:10px;
+      display: flex;
+      flex:100%;
+    }
+
+    .topnav a {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      transition: .3s;
+    }
+
+    .topnav a:hover {
+      background-color: tomato;
+      color: white;
+    }
+
+    .topnav a.active {
+      background-color:tomato;
+      color: white;
+    }
+
+    body, html {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .bg {
+      /* Full height */
+      height: 500px;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .bg-top-page {
+      background-color:black;
+      height:20%;
+    }
+
+    .flex-container {
+      flex: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap:wrap;
+      padding: 10px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .center-text {
+      color:white;
+    }
+
+    .center-box-text {
+      color:white;
+      margin:5px;
+    }
+
+    a:hover {
+      text-decoration:none;
+    }
+
+    ::selection {
+      background-color: tomato;
+      color: white;
+    }
+
+    p {
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      flex-wrap:wrap;
+      padding: 10px;
+    }
+
+  </style>
+
+</head>
+
+<header>
+  <div class="topnav">
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/store">Store</a>
+    <a class="active" href="/contact">Contact</a>
+  </div>
+</header>
+
+<div class="bg">
+  
+  <h1 style="text-align:center">Contact Us</h1>
+  
+
+  <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="form-actions" style="text-align:center">
+        <button type="submit">Send</button>
+      </div>
+  </form>
+
+</div>
+
+<footer>
+    
+</footer>
+</html>
